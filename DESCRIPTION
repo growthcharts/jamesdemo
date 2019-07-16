@@ -1,0 +1,34 @@
+Package: james.demo
+Type: Package
+Title: Website to demostrate JAMES functionality
+Author: Stef van Buuren
+Maintainer: Stef van Buuren <stef.vanbuuren@tno.nl>
+Description: The Joint Anthropometric Measurement and Evaluation System
+    (JAMES) is a webservice with online tools to display and predict 
+    growth charts. The james.demo package implements a Shiny website to
+    show JAMES tools using a set of demo children.
+Version: 0.9.0
+Date: 2019-07-16
+Encoding: UTF-8
+License: GPL-2
+LazyData: Yes
+Copyright: Stef van Buuren 2019
+Depends:
+    R (>= 2.10),
+    shiny
+Imports: 
+    chartbox,
+    chartcatalog,
+    chartplotter,
+    grDevices,
+    grid,
+    methods,
+    minihealth
+Suggests:
+    testthat
+Remotes: 
+  stefvanbuuren/chartbox,
+  stefvanbuuren/chartcatalog,
+  stefvanbuuren/chartplotter,
+  stefvanbuuren/minihealth
+RoxygenNote: 6.1.1
