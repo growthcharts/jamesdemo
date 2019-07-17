@@ -1,13 +1,13 @@
-Package: james.demo
+Package: jamestest
 Type: Package
-Title: Website to demostrate JAMES functionality
+Title: Application to test JAMES functionality
 Author: Stef van Buuren
 Maintainer: Stef van Buuren <stef.vanbuuren@tno.nl>
 Description: The Joint Anthropometric Measurement and Evaluation System
     (JAMES) is a webservice with online tools to display and predict 
-    growth charts. The james.demo package implements a Shiny website to
-    show JAMES tools using a set of demo children.
-Version: 0.9.0
+    growth charts. The jamestest package implements a Shiny website to
+    test JAMES tools on a set of demo children.
+Version: 0.10.0
 Date: 2019-07-16
 Encoding: UTF-8
 License: GPL-2

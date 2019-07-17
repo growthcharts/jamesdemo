@@ -29,14 +29,9 @@ body > .main-header .logo {
   color: #313faa;
 }
 
-
-
-
 /* body background color set to grey97 */
 .content-wrapper {
     min-height: 100%;
     background-color: #f7f7f7;
     z-index: 800
 }
-
-

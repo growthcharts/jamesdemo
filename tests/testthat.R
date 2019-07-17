@@ -1,4 +1,4 @@
 library(testthat)
-library(james.demo)
+library(jamestest)
 
-# test_check("james.demo")
+# test_check("jamestest")
