@@ -25,10 +25,12 @@ Imports:
     methods,
     minihealth
 Suggests:
+    jamesclient,
     testthat
 Remotes: 
   stefvanbuuren/chartbox,
   stefvanbuuren/chartcatalog,
   stefvanbuuren/chartplotter,
+  stefvanbuuren/jamesclient,
   stefvanbuuren/minihealth
 RoxygenNote: 6.1.1

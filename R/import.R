@@ -5,5 +5,5 @@
 #' @importFrom grDevices      palette
 #' @importFrom grid           grid.draw is.grob
 #' @importFrom methods        slot
-#' @importFrom minihealth     get_range
+#' @importFrom minihealth     get_range convert_individual_bds
 NULL
