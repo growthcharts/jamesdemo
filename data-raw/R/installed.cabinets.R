@@ -14,7 +14,7 @@ create.cabinet.donor <- function(dnr, ids, names = as.character(ids)) {
   # copy individuals
   ind <- vector("list", n)
   for (i in 1:n) {
-    target <- minihealth::donordata.to.individual(dnr = dnr,
+    target <- minihealth::donordata_to_individual(dnr = dnr,
                                                   id = ids[i])
     target@name <- names[i]
 
