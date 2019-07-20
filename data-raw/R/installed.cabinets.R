@@ -13,14 +13,11 @@ create.cabinet.donor <- function(dnr, ids, names = as.character(ids)) {
 
   # copy individuals
   ind <- vector("list", n)
+  names(ind) <- names
   for (i in 1:n) {
     target <- minihealth::donordata_to_individual(dnr = dnr,
                                                   id = ids[i])
     target@name <- names[i]
-
-    # update child and time slots
-    target <- groeivoorspeller:::update.child.slot(target)
-    target <- groeivoorspeller:::update.time.slot(target)
 
     # save child in list
     ind[[i]] <- target
@@ -74,7 +71,7 @@ create.cabinet.preterm <- function() {
 #' @author Stef van Buuren 2017
 create.cabinet.terneuzen <- function() {
   dnr <- "terneuzen"
-  ids <- as.integer(donordata::terneuzen$id[seq(100, 1000, by = 100)])
+  ids <- as.integer(donordata::terneuzen$child$id[seq(100, 1000, by = 100)])
   names <- c("T 163", "T 1017",  "T 1413", "T 2035",  "T 2602",
              "T 3254", "T 4207",  "T 5002", "T 5270", "T 6021")
   create.cabinet.donor(dnr, ids, names)
@@ -85,67 +82,15 @@ create.cabinet.terneuzen <- function() {
 #'
 #' @seealso \linkS4class{cabinet}
 #' @return An S4 object of class \code{cabinet}
-#' @author Stef van Buuren 2016
+#' @author Stef van Buuren 2019
 create.cabinet.graham <- function() {
-
-  ## data from Patricia Graham
-  fn <- system.file("extdata", "graham.txt", package = "groeivoorspeller")
-  data <- read.table(fn, header = TRUE, sep = "\t", dec = ".")
-
-  # select child level variables
-  child <- data[data$rec == 1, ]
-
-  # calculate age
-  date <- as.Date(data$date, format = "%d-%m-%y")
-  dob  <- as.Date(data$dob, format = "%d-%m-%y")
-  age <- round(as.numeric((date - dob)/365.25), 3)
-  data <- data.frame(age = age, data)
-
-  # create empty cabinet with nine children
-  cab <- new("cabinet", n = 9)
-
-  # fill cabinet with child data
-  for (i in 1:length(cab)) {
-    cr <- child[i,]
-    time <- data[data$cpn == i, ]
-
-    pid <- new("individualID", id = as.integer(i),
-               name = as.character(cr$name),
-               dob = as.character(as.Date(cr$dob, format = "%d-%m-%y")),
-               dnr = "graham.txt")
-    pbg <- new("individualBG", sex = as.character(cr$sex),
-               etn = as.character(cr$etn),
-               bw = as.numeric(cr$wgt),    # Warning: this assumes that age == 0 is always first record
-               hgtm = as.numeric(cr$hgtm),
-               hgtf = as.numeric(cr$hgtf))
-    pan <- new("individualAN",
-               hgt = new("xyz", yname = "hgt",
-                         x = time$age,
-                         y = time$hgt),
-               wgt = new("xyz", yname = "wgt",
-                         x = time$age,
-                         y = time$wgt),
-               hdc = new("xyz", yname = "hdc",
-                         x = time$age,
-                         y = time$hdc))
-    pbs <- new("individualBS",
-               bs.hgt = new("bse", yname = "hgt",
-                            data = pan@hgt, at = "knots"),
-               bs.wgt = new("bse", yname = "wgt",
-                            data = pan@wgt, at = "knots"),
-               bs.hdc = new("bse", yname = "hdc",
-                            data = pan@hdc, at = "knots"))
-    p <- new("individual", pid, pbg, pan, pbs)
-    cab[[i]] <- p
-  }
-
-  # post-processing
-  cab@ids <- sapply(cab, slot, "id")
-  validObject(cab)
-
+  dnr <- "graham"
+  ids <- 1:9
+  names <- c("Lotte G", "Tim G", "Hasna G", "Naomi G", "Sven G",
+             "Nikki G", "Nienke G", "Femke G", "Bas")
+  cab <- create.cabinet.donor(dnr, ids, names)
   return(cab)
 }
-
 
 
 #' Creates an empty cabinet for 10 children
@@ -210,5 +155,5 @@ installed.cabinets <- list(none = none,
                            graham = graham,
                            mykids = mykids)
 
-devtools::use_data(installed.cabinets, overwrite = TRUE)
+usethis::use_data(installed.cabinets, overwrite = TRUE)
 
