@@ -3,7 +3,7 @@ shinyServer(function(input, output, session) {
   # embedding adapted from https://stackoverflow.com/questions/33020558/embed-iframe-inside-shiny-app
 
   # initialize local (user) variables
-  cabinets <- list2env(installed.cabinets)
+  cabinets <- list2env(jamestest::installed.cabinets)
   # site_url <- "http://groeidiagrammen.nl/ocpu/lib/james/www/"
 
   # --- begin reactive functions ---
@@ -34,20 +34,11 @@ shinyServer(function(input, output, session) {
   current.url <- reactive({
     individual <- current.target()
     bds <- minihealth::convert_individual_bds(ind = individual)
-    # browser()
-    # save as file - hack
-    #fn <- "upload.json"
-    #con <- file(fn, "wt")
-    #writeLines(text = bds, con = con)
-    #
-    jamesclient::request_site(txt = bds)
-    #close(con)
+    jamesclient::request_site(bds,
+                              host = "http://localhost:5656",
+                              path = "ocpu/apps/stefvanbuuren/james")
   })
   # --- end reactive functions
-
-  # --- begin observers
-  # if the target changes, update the site-url
-  # --- end observers
 
   output$james <- renderUI({
     site_url <- current.url()
