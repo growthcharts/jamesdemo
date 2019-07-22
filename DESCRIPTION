@@ -7,8 +7,8 @@ Description: The Joint Anthropometric Measurement and Evaluation System
     (JAMES) is a webservice with online tools to display and predict 
     growth charts. The jamestest package implements a Shiny website to
     test JAMES tools on a set of demo children.
-Version: 0.10.0
-Date: 2019-07-16
+Version: 0.11.0
+Date: 2019-07-22
 Encoding: UTF-8
 License: GPL-3
 LazyData: Yes
@@ -16,21 +16,10 @@ Copyright: Stef van Buuren 2019
 Depends:
     R (>= 2.10),
     shiny
-Imports: 
-    chartbox,
-    chartcatalog,
-    chartplotter,
-    grDevices,
-    grid,
-    methods,
-    minihealth
 Suggests:
     jamesclient,
-    testthat
+    minihealth
 Remotes: 
-  stefvanbuuren/chartbox,
-  stefvanbuuren/chartcatalog,
-  stefvanbuuren/chartplotter,
   stefvanbuuren/jamesclient,
   stefvanbuuren/minihealth
 RoxygenNote: 6.1.1
