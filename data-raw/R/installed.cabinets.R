@@ -1,13 +1,13 @@
 #' Creates a cabinet from donor data
 #'
-#' This function copies child records from the \code{donordata} package into an
+#' This function copies child records from the \code{donorloader} package into an
 #' S4 object of class \code{cabinet}. For all gestional ages, the
 #' Dutch 1997 references are used to calculate Z-scores.
 #' @param dnr Character vector with the name of the donor data
 #' @param ids vector of unique (\code{integer}) id numbers for the individuals
 #' @param names character vector with names of length \code{length(ids)}
 #' @seealso \linkS4class{cabinet}
-#' @author Stef van Buuren 2017
+#' @author Stef van Buuren 2019
 create.cabinet.donor <- function(dnr, ids, names = as.character(ids)) {
   n <- length(ids)
 
@@ -70,8 +70,9 @@ create.cabinet.preterm <- function() {
 #' @return An S4 object of class \code{cabinet}
 #' @author Stef van Buuren 2017
 create.cabinet.terneuzen <- function() {
+  terneuzen <- load_data(dnr = "terneuzen")
   dnr <- "terneuzen"
-  ids <- as.integer(donordata::terneuzen$child$id[seq(100, 1000, by = 100)])
+  ids <- as.integer(terneuzen$child$id[seq(100, 1000, by = 100)])
   names <- c("T 163", "T 1017",  "T 1413", "T 2035",  "T 2602",
              "T 3254", "T 4207",  "T 5002", "T 5270", "T 6021")
   create.cabinet.donor(dnr, ids, names)
@@ -137,7 +138,6 @@ init.cabinets <- function(envir) {
 }
 
 library(minihealth)
-library(donordata)
 library(donorloader)
 con <- NULL
 
