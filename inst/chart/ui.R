@@ -12,8 +12,7 @@ sidebar <- shinydashboard::dashboardSidebar(
                           "SMOCK" = "smocc",
                           "Pinkeltje" = "preterm",
                           "Graham" = "graham",
-                          "Terneuzen" = "terneuzen",
-                          "Mijn kinderen" = "mykids"),
+                          "Terneuzen" = "terneuzen"),
               selected =  "none"),
   conditionalPanel(
     condition = "input.cabinet == 'none'",
