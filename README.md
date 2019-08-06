@@ -27,6 +27,9 @@ library(jamestest)
 go()
 ```
 
+The site will not run in the internal RStudio viewer. Click on button
+`Open in browser`.
+
 ## Resources
 
   - [JAMES](https://github.com/stefvanbuuren/james)
