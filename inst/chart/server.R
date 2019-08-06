@@ -31,20 +31,31 @@ shinyServer(function(input, output, session) {
     return(target)
   })
 
+  current.host <- reactive({
+    switch(input$server,
+           groeidiagrammen.nl = "https://groeidiagrammen.nl",
+           james.tno.nl = "https://james.tno.nl",
+           localhost = "http://localhost:5656")
+  })
+  current.path <- reactive({
+    switch(input$server,
+           groeidiagrammen.nl = "ocpu/library/james",
+           james.tno.nl = "ocpu/library/james",
+           localhost = "ocpu/apps/stefvanbuuren/james")
+  })
+
   current.url <- reactive({
     individual <- current.target()
     bds <- minihealth::convert_individual_bds(ind = individual)
     jamesclient::request_site(bds,
-                              host = "http://localhost:5656",
-                              path = "ocpu/apps/stefvanbuuren/james")
+                              host = current.host(),
+                              path = current.path())
   })
   # --- end reactive functions
 
   output$james <- renderUI({
     site_url <- current.url()
-    my_test <- tags$iframe(src = site_url, width = "100%", height = "1311px", style="border:2px dotted gray;")
-    print(my_test)
-    my_test
+    tags$iframe(src = site_url, width = "100%", height = "1311px", style="border:1px dotted #18BC9C;")
   })
 }
 )
