@@ -88,7 +88,6 @@ sidebar <- shinydashboard::dashboardSidebar(
   selectInput(inputId = "server",
               label = "JAMES server",
               choices = c("groeidiagrammen.nl" = "groeidiagrammen.nl",
-                          "james.tno.nl" = "james.tno.nl",
                           "localhost" = "localhost"),
               selected = "groeidiagrammen.nl")
 )

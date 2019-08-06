@@ -15,10 +15,9 @@ Copyright: Stef van Buuren 2019
 Depends:
     R (>= 2.10),
     shiny
-Suggests:
+Imports:
     jamesclient,
-    minihealth,
-    donorloader
+    minihealth
 Remotes: 
   stefvanbuuren/jamesclient,
   stefvanbuuren/minihealth
