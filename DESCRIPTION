@@ -17,7 +17,8 @@ Depends:
     shiny
 Imports:
     jamesclient,
-    minihealth
+    minihealth,
+    shinydashboard
 Remotes: 
   stefvanbuuren/jamesclient,
   stefvanbuuren/minihealth

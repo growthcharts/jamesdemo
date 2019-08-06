@@ -1,4 +1,6 @@
 #' @import     shiny
-#' @importFrom jamesclient request_site
-#' @importFrom minihealth  convert_individual_bds
+#' @importFrom jamesclient    request_site
+#' @importFrom minihealth     convert_individual_bds
+#' @importFrom shinydashboard dashboardBody dashboardHeader
+#'                            dashboardPage dashboardSidebar
 NULL
