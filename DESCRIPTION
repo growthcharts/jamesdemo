@@ -1,16 +1,15 @@
 Package: jamestest
 Type: Package
-Title: Application to test JAMES functionality
+Title: Shiny app to test JAMES
 Author: Stef van Buuren
 Maintainer: Stef van Buuren <stef.vanbuuren@tno.nl>
-Description: The Joint Anthropometric Measurement and Evaluation System
-    (JAMES) is a webservice with online tools to display and predict 
-    growth charts. The jamestest package implements a Shiny website to
-    test JAMES tools on a set of demo children.
-Version: 0.12.0
-Date: 2019-07-29
+Description: A Shiny app with demo children for testing the web site 
+    construction functionality implemented in the 
+    Joint Anthropometric Measurement and Evaluation System (JAMES). 
+Version: 0.13.0
+Date: 2019-08-06
 Encoding: UTF-8
-License: GPL-3
+License: AGPL-3 + file LICENSE
 LazyData: Yes
 Copyright: Stef van Buuren 2019
 Depends:
