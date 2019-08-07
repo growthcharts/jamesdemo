@@ -1,3 +1,4 @@
+library("jamestest")
 library("jamesclient")
 library("shinydashboard")
 library("shiny")
