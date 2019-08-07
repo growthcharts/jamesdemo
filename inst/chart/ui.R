@@ -1,6 +1,4 @@
-library("jamesclient")
-library("shinydashboard")
-library("shiny")
+library("jamestest")
 
 header <- shinydashboard::dashboardHeader(
   title = "JAMES tryout")
