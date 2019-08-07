@@ -20,6 +20,6 @@ Imports:
     rsconnect,
     shinydashboard
 Remotes: 
-  stefvanbuuren/jamesclient
+  stefvanbuuren/jamesclient,
   stefvanbuuren/jamestest
 RoxygenNote: 6.1.1
