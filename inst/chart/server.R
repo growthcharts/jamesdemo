@@ -21,7 +21,7 @@ shinyServer(function(input, output, session) {
     childname <- current.childname()
     if (childname == "0") return(NULL)
     if (childname == "1") return(NULL)
-    fn <- file.path(path.package("jamesclient"), "extdata",
+    fn <- file.path(path.package("jamestest"), "extdata",
                     current.cabinet(), paste0(childname, ".json"))
     target <- readLines(con = fn)
     return(target)
