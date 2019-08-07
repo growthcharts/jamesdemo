@@ -30,6 +30,12 @@ go()
 The site will not run in the internal RStudio viewer. Click on button
 `Open in browser`.
 
+## Online version
+
+You can spare yourself the trouble of installing the package, and visit
+`JAMES tryout` at
+<https://tnochildhealthstatistics.shinyapps.io/james_tryout/>.
+
 ## Resources
 
   - [JAMES](https://github.com/stefvanbuuren/james)
