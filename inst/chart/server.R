@@ -24,7 +24,7 @@ shinyServer(function(input, output, session) {
   })
 
   current.target <- reactive({
-    childnum <- current.childname()
+    childname <- current.childname()
     if (childname == "0") return(NULL)
     if (childname == "1") return(NULL)
     fn <- file.path(path.package("jamestest"), "extdata",
