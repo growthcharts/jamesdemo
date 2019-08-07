@@ -3,7 +3,7 @@ library("shinydashboard")
 library("shiny")
 
 header <- shinydashboard::dashboardHeader(
-  title = "JAMES test")
+  title = "JAMES tryout")
 
 sidebar <- shinydashboard::dashboardSidebar(
   tags$head(
