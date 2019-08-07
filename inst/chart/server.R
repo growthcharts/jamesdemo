@@ -1,3 +1,4 @@
+library("jamesclient")
 shinyServer(function(input, output, session) {
 
   # --- begin reactive functions ---
