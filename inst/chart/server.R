@@ -1,11 +1,5 @@
 shinyServer(function(input, output, session) {
 
-  # embedding adapted from https://stackoverflow.com/questions/33020558/embed-iframe-inside-shiny-app
-
-  # initialize local (user) variables
-  # cabinets <- list2env(jamestest::installed.cabinets)
-  # site_url <- "http://groeidiagrammen.nl/ocpu/lib/james/www/"
-
   # --- begin reactive functions ---
   current.childname <- reactive({
     cab <- input$cabinet

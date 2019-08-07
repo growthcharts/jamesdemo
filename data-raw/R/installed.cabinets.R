@@ -126,7 +126,6 @@ create.cabinet.mykids <- function() {
 #' @param envir environment in which cabinets should be stored
 #' @seealso \linkS4class{cabinet}
 #' @author Stef van Buuren 2017
-#' @export
 init.cabinets <- function(envir) {
   assign("none", new("cabinet", readonly = TRUE), envir = envir)
   assign("smocc", create.cabinet.smocc(), envir = envir)

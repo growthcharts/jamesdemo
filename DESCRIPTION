@@ -17,6 +17,7 @@ Depends:
     shiny
 Imports:
     jamesclient,
+    rsconnect,
     shinydashboard
 Remotes: 
   stefvanbuuren/jamesclient
