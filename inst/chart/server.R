@@ -3,31 +3,33 @@ shinyServer(function(input, output, session) {
   # embedding adapted from https://stackoverflow.com/questions/33020558/embed-iframe-inside-shiny-app
 
   # initialize local (user) variables
-  cabinets <- list2env(jamestest::installed.cabinets)
+  # cabinets <- list2env(jamestest::installed.cabinets)
   # site_url <- "http://groeidiagrammen.nl/ocpu/lib/james/www/"
 
   # --- begin reactive functions ---
-  current.childnum <- reactive({
+  current.childname <- reactive({
     cab <- input$cabinet
-    childnum <- switch(cab,
-                       "none" = 1,
-                       "smocc" = as.numeric(input$cpn_smocc),
-                       "preterm" = as.numeric(input$cpn.preterm),
-                       "mykids" = as.numeric(input$cpn.mykids),
-                       "graham" = as.numeric(input$cpn.graham),
-                       "terneuzen" = as.numeric(input$cpn.terneuzen),
-                       0)
-    return(childnum)
+    childname <- switch(cab,
+                       "none" = "1",
+                       "smocc" = input$cpn_smocc,
+                       "preterm" = input$cpn.preterm,
+                       "graham" = input$cpn.graham,
+                       "terneuzen" = input$cpn.terneuzen,
+                       "0")
+    return(childname)
   })
 
   current.cabinet <- reactive({
-    get(input$cabinet, envir = cabinets, inherits = FALSE)
+    input$cabinet
   })
 
   current.target <- reactive({
-    childnum <- current.childnum()
-    if (childnum == 0) return(NULL)
-    target <- current.cabinet()[[childnum]]
+    childnum <- current.childname()
+    if (childname == "0") return(NULL)
+    if (childname == "1") return(NULL)
+    fn <- file.path(path.package("jamestest"), "extdata",
+                    current.cabinet(), paste0(childname, ".json"))
+    target <- readLines(con = fn)
     return(target)
   })
 
@@ -45,8 +47,7 @@ shinyServer(function(input, output, session) {
   })
 
   current.url <- reactive({
-    individual <- current.target()
-    bds <- minihealth::convert_individual_bds(ind = individual)
+    bds <- current.target()
     jamesclient::request_site(bds,
                               host = current.host(),
                               path = current.path())
