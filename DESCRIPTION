@@ -17,9 +17,7 @@ Depends:
     shiny
 Imports:
     jamesclient,
-    minihealth,
     shinydashboard
 Remotes: 
-  stefvanbuuren/jamesclient,
-  stefvanbuuren/minihealth
+  stefvanbuuren/jamesclient
 RoxygenNote: 6.1.1
