@@ -1,0 +1,15 @@
+{
+   "OrganisatieCode":1234,
+   "ClientGegevens":{
+      "Elementen":[
+         {
+            "Bdsnummer":19,
+            "Waarde":"2"
+         },
+         {
+            "Bdsnummer":20,
+            "Waarde":"20181011"
+         }
+         ]
+   }
+}
