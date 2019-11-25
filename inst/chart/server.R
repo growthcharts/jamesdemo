@@ -9,6 +9,7 @@ shinyServer(function(input, output, session) {
                         "preterm" = input$cpn.preterm,
                         "graham" = input$cpn.graham,
                         "terneuzen" = input$cpn.terneuzen,
+                        "test" = input$cpn.test,
                         "0")
     return(childname)
   })
