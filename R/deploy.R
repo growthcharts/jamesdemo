@@ -1,7 +1,7 @@
 #' Deploy on shinyapps.io
 #' @export
 deploy <- function() {
-  deployApp(appDir = file.path(path.package(package = "jamestest"), "chart"),
+  deployApp(appDir = system.file("chart", package = "jamestest"),
             appTitle =  "JAMES tryout",
             account = "tnochildhealthstatistics")
 }

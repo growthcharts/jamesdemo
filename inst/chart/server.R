@@ -4,12 +4,12 @@ shinyServer(function(input, output, session) {
   current.childname <- reactive({
     cab <- input$cabinet
     childname <- switch(cab,
-                       "none" = "1",
-                       "smocc" = input$cpn_smocc,
-                       "preterm" = input$cpn.preterm,
-                       "graham" = input$cpn.graham,
-                       "terneuzen" = input$cpn.terneuzen,
-                       "0")
+                        "none" = "1",
+                        "smocc" = input$cpn_smocc,
+                        "preterm" = input$cpn.preterm,
+                        "graham" = input$cpn.graham,
+                        "terneuzen" = input$cpn.terneuzen,
+                        "0")
     return(childname)
   })
 
@@ -21,8 +21,8 @@ shinyServer(function(input, output, session) {
     childname <- current.childname()
     if (childname == "0") return(NULL)
     if (childname == "1") return(NULL)
-    fn <- file.path(path.package("jamestest"), "extdata",
-                    current.cabinet(), paste0(childname, ".json"))
+    fn <- system.file("extdata", current.cabinet(), paste0(childname, ".json"),
+                      package = path.package("jamestest"))
     target <- readLines(con = fn)
     return(target)
   })
