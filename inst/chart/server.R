@@ -22,7 +22,7 @@ shinyServer(function(input, output, session) {
     if (childname == "0") return(NULL)
     if (childname == "1") return(NULL)
     fn <- system.file("extdata", current.cabinet(), paste0(childname, ".json"),
-                      package = path.package("jamestest"))
+                      package = "jamestest")
     target <- readLines(con = fn)
     return(target)
   })
