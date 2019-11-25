@@ -6,8 +6,8 @@ Maintainer: Stef van Buuren <stef.vanbuuren@tno.nl>
 Description: A Shiny app with demo children for testing the web site 
     construction functionality implemented in the 
     Joint Anthropometric Measurement and Evaluation System (JAMES). 
-Version: 0.14.3
-Date: 2019-08-07
+Version: 0.15.0
+Date: 2019-11-25
 Encoding: UTF-8
 License: AGPL-3 + file LICENSE
 LazyData: Yes
