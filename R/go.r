@@ -1,4 +1,3 @@
-
 #'Start the SHINY server
 #'
 #'@aliases go
