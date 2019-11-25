@@ -4,7 +4,7 @@
 # jamestest
 
 The `jamestest` is a simple Shiny app with demo children. The goal of
-the package is to test the web site construction facility of the **Joint
+the package is to test the website construction facility of the **Joint
 Anthropometric Measurement and Evaluation System (JAMES)**. JAMES is an
 **experimental** online resource for creating and analysing growth
 charts.
