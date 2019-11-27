@@ -12,10 +12,12 @@ test11.json  Bdsnummer 82 missing
 test12.json  Bdsnummer 91 missing
 test13.json  Bdsnummer 110 missing
 test14.json  Empty file
-test15.json  Bdsnummer 19 numeric
+test15.json  Bdsnummer 19 + 62 numeric
 test16.json  Bdsnummer 20 numeric
 test17.json  Bdsnummer 82 numeric
 test18.json  Bdsnummer 91 numeric
 test19.json  Bdsnummer 110 numeric
 test20.json  Missing "Groepen" field
 test21.json  Minimal JSON file
+test22.json  Range checks
+test23.json  19 + 62 numeric, out-of-range 82 + 252, missing groepen
