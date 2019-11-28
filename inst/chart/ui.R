@@ -111,7 +111,8 @@ sidebar <- shinydashboard::dashboardSidebar(
                             "T19" = "test19",
                             "T20" = "test20",
                             "T21" = "test21",
-                            "T22" = "test22"),
+                            "T22" = "test22",
+                            "T23" = "test23"),
                 selected = "test1")
   ),
   selectInput(inputId = "server",
