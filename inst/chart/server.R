@@ -24,7 +24,7 @@ shinyServer(function(input, output, session) {
     if (childname == "1") return(NULL)
     fn <- system.file("extdata", current.cabinet(), paste0(childname, ".json"),
                       package = "jamestest")
-    target <- readLines(con = fn)
+    target <- jsonlite::minify(readLines(con = fn))
     return(target)
   })
 
