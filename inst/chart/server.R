@@ -24,7 +24,12 @@ shinyServer(function(input, output, session) {
     if (childname == "1") return(NULL)
     fn <- system.file("extdata", current.cabinet(), paste0(childname, ".json"),
                       package = "jamestest")
-    target <- jsonlite::minify(readLines(con = fn))
+    # target <- jsonlite::minify(readLines(con = fn))
+    target <- readLines(con = fn)
+    # url <- paste0("https://raw.githubusercontent.com/stefvanbuuren/jamestest/master/inst/extdata/test/", childname, ".json")
+    # target <- readLines(con = url)
+    # target url does not yet work
+    # target <- url
     return(target)
   })
 
@@ -44,10 +49,34 @@ shinyServer(function(input, output, session) {
   })
 
   current.url <- reactive({
-    bds <- current.target()
-    jamesclient::request_site(bds,
-                              host = current.host(),
-                              path = current.path())
+    bds  <- current.target()
+    host <- current.host()
+    path <- current.path()
+    app  <- file.path(host, path, "www/")
+    fun  <- file.path(host, path, "R/convert_bds_ind")
+
+    # bds is a URL or a JSON string
+    if (is.null(bds)) return(app)
+    resp <- POST(url = fun,
+                       body = list(txt = bds),
+                       encode = "json",
+                       add_headers(Accept = "plain/text"))
+
+    # throw warnings and messages
+    url_warnings <- jamesclient::get_url(resp, "warnings")
+    url_messages <- jamesclient::get_url(resp, "messages")
+    if (length(url_warnings) >= 1L)
+      warning(content(GET(url_warnings), "text", encoding = "utf-8"))
+    if (length(url_messages) >= 1L)
+      message(content(GET(url_messages), "text", encoding = "utf-8"))
+
+    # stop for unsuccesful request
+    stop_for_status(resp,
+                    task = paste0("upload data", "\n  ",
+                                   content(resp, "text", encoding = "utf-8")))
+
+    if (http_error(resp)) app
+    else paste(app, paste("ind", headers(resp)$location, sep = "="), sep = "?")
   })
   # --- end reactive functions
 

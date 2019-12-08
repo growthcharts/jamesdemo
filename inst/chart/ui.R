@@ -1,4 +1,5 @@
 library("jamestest")
+library("httr")
 
 header <- shinydashboard::dashboardHeader(
   title = "JAMES tryout")
