@@ -21,3 +21,4 @@ test20.json  Missing "Groepen" field
 test21.json  Minimal JSON file
 test22.json  Range checks
 test23.json  19 + 62 numeric, out-of-range 82 + 252, missing groepen
+test24.json  add ddi responses
