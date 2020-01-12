@@ -22,5 +22,6 @@ Suggests:
     jamesclient,
     testthat
 Remotes: 
-  stefvanbuuren/jamesclient
+  github::stefvanbuuren/jamesclient,
+  github::stefvanbuuren/jamestest
 RoxygenNote: 7.0.2
