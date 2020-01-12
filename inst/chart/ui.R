@@ -1,4 +1,5 @@
 library("jamestest")
+library("jamesclient")
 library("httr")
 
 header <- shinydashboard::dashboardHeader(

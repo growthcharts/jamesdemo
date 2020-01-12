@@ -6,7 +6,7 @@ Maintainer: Stef van Buuren <stef.vanbuuren@tno.nl>
 Description: A Shiny app with demo children for testing the web site 
     construction functionality implemented in the 
     Joint Anthropometric Measurement and Evaluation System (JAMES). 
-Version: 0.18.0
+Version: 0.18.1
 Date: 2020-01-13
 Encoding: UTF-8
 License: AGPL-3 + file LICENSE
@@ -16,11 +16,11 @@ Depends:
     R (>= 2.10),
     shiny
 Imports:
-    jamesclient,
     rsconnect,
     shinydashboard
+Suggests:
+    jamesclient,
+    testthat
 Remotes: 
   stefvanbuuren/jamesclient
 RoxygenNote: 7.0.2
-Suggests: 
-    testthat
