@@ -2,6 +2,7 @@
 
 export(deploy)
 export(go)
+import(jamesclient)
 import(shiny)
 importFrom(rsconnect,deployApp)
 importFrom(shinydashboard,dashboardBody)

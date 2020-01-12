@@ -14,12 +14,12 @@ LazyData: Yes
 Copyright: Stef van Buuren 2020
 Depends:
     R (>= 2.10),
-    shiny
+    shiny,
+    jamesclient
 Imports:
     rsconnect,
     shinydashboard
 Suggests:
-    jamesclient,
     testthat
 URL: https://github.com/stefvanbuuren/jamestest
 Remotes: 
