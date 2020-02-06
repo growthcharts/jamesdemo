@@ -45,7 +45,7 @@ shinyServer(function(input, output, session) {
            groeidiagrammen.nl = "ocpu/library/james",
            james.tno.nl = "ocpu/library/james",
            vps.stefvanbuuren.nl = "ocpu/library/james",
-           localhost = "ocpu/apps/stefvanbuuren/james")
+           localhost = "ocpu/library/james")
   })
 
   current.url <- reactive({
