@@ -20,6 +20,7 @@ Imports:
     rsconnect,
     shinydashboard
 Suggests:
+    minihealth,
     testthat
 URL: https://github.com/stefvanbuuren/jamestest
 Remotes: 
