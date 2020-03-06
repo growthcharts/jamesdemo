@@ -1,6 +1,6 @@
 # save installed.cabinets as json files for testing
 library(jamestest)
-path <- path.expand("~/Package/jamesclient/jamestest")
+path <- path.expand("~/Package/jamestest/jamestest")
 
 cabs <- names(installed.cabinets)[2:5]
 
