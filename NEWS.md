@@ -1,3 +1,7 @@
+# jamestest 0.19.4
+
+* Update JSON so that GA is in days
+
 # jamestest 0.19.3
 
 * Saves cleaner JSON examples files
