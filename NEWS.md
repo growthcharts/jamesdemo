@@ -1,3 +1,7 @@
+# jamestest 0.19.2
+
+* Update `installed.cabinets` to `minihealth 0.71.0`
+
 # jamestest 0.19.1
 
 * Update `installed.cabinets` so that `length(dsc@y)` matches `length(dsc@x)` 
