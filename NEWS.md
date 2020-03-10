@@ -1,3 +1,7 @@
+# jamestest 0.20.0
+
+* Extend SMOCC JSON files to include DDI milestone responses
+
 # jamestest 0.19.4
 
 * Update JSON so that GA is in days
