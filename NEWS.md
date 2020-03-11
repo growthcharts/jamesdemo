@@ -1,3 +1,7 @@
+# jamestest 0.21.0
+
+* Refresh `installed.cabinets` and example JSON files to extra `gad` slot in `minihealth::individualBG` class
+
 # jamestest 0.20.0
 
 * Extend SMOCC JSON files to include DDI milestone responses
