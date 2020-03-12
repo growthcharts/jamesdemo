@@ -1,3 +1,7 @@
+# jamestest 0.21.1 
+
+* Add synthetic DOB to preterm and terneuzen JSON examples
+
 # jamestest 0.21.0
 
 * Refresh `installed.cabinets` and example JSON files to extra `gad` slot in `minihealth::individualBG` class
