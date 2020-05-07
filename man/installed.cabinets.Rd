@@ -4,8 +4,10 @@
 \name{installed.cabinets}
 \alias{installed.cabinets}
 \title{Installed user cabinets}
-\format{A list of \code{cabinet} objects. The \code{cabinet} object is
-defined in the \code{minihealth} package.}
+\format{
+A list of \code{cabinet} objects. The \code{cabinet} object is
+defined in the \code{minihealth} package.
+}
 \usage{
 installed.cabinets
 }
