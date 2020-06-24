@@ -1,0 +1,62 @@
+{
+  "Referentie": "eaglescience-datavraag200515",
+  "OrganisatieCode": 1,
+  "ClientGegevens": [
+    {
+      "ElementNummer": 607,
+      "Waarde": 44444
+    },
+    {
+      "ElementNummer": 81,
+      "Waarde": "aaa"
+    },
+    {
+      "ElementNummer": 62,
+      "Waarde": "01", //vader
+      "GenesteElementen": [
+        {
+            "ElementNummer": 71,
+            "Waarde": "6030"
+        },
+        {
+            "ElementNummer": 63,
+            "Waarde": "19950704"
+        }
+      ]
+    },
+    {
+      "ElementNummer": 62,
+      "Waarde": "02", //moeder
+      "GenesteElementen": [
+        {
+            "ElementNummer": 71,
+            "Waarde": "6030"
+        },
+        {
+            "ElementNummer": 63,
+            "Waarde:" "19901202"
+        }
+      ]
+    }
+  ],
+  "ContactMomenten": [
+    {
+      "Tijdstip": "27042020",
+      "Elementen": [
+        {
+          "ElementNummer": 22,
+          "Waarde": "a"
+        }
+      ],
+    },
+    {
+      "Tijdstip": "28042020",
+      "Elementen": [
+        {
+          "ElementNummer": 22,
+          "Waarde": "b"
+        }
+      ],
+    }
+  ]
+}
