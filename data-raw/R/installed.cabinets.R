@@ -8,7 +8,7 @@
 #' @param names character vector with names of length \code{length(ids)}
 #' @seealso \linkS4class{cabinet}
 #' @author Stef van Buuren 2019
-create.cabinet.donor <- function(dnr, ids, names = as.character(ids)) {
+create.cabinet.donor <- function(dnr, ids, names = as.character(ids), ...) {
   n <- length(ids)
 
   # copy individuals
@@ -16,7 +16,7 @@ create.cabinet.donor <- function(dnr, ids, names = as.character(ids)) {
   names(ind) <- names
   for (i in 1:n) {
     target <- minihealth::donordata_to_individual(dnr = dnr,
-                                                  id = ids[i])
+                                                  id = ids[i], ...)
     target@name <- names[i]
 
     # save child in list
@@ -61,6 +61,20 @@ create.cabinet.preterm <- function() {
              "Freek P", "Anouk P",  "Sharon P", "Nick P", "Simon P")
   cab <- create.cabinet.donor(dnr, ids, names)
 
+  return(cab)
+}
+
+#' Creates cabinet of children from POPS survivors at 19 (n = 959)
+#'
+#' @seealso \linkS4class{cabinet}, \code{\link{create.cabinet.donor}}
+#' @return An S4 object of class \code{cabinet}
+#' @author Stef van Buuren 2020
+create.cabinet.pops <- function() {
+  dnr <- "pops"
+  ids <- as.integer(c(1, 4, 176, 234, 235, 290, 291, 548, 549, 625))
+  names <- c("Angela", "Boris", "Chantalle", "Bonny", "Clyde",
+             "Agnetha", "Anni-Frid", "Stan", "Laurel", "Randy")
+  cab <- create.cabinet.donor(dnr, ids, names, models = "pops_bs")
   return(cab)
 }
 
@@ -130,6 +144,7 @@ init.cabinets <- function(envir) {
   assign("none", new("cabinet", readonly = TRUE), envir = envir)
   assign("smocc", create.cabinet.smocc(), envir = envir)
   assign("preterm", create.cabinet.preterm(), envir = envir)
+  assign("pops", create.cabinet.pops(), envir = envir)
   assign("terneuzen", create.cabinet.preterm(), envir = envir)
   assign("graham", create.cabinet.graham(), envir = envir)
   assign("mykids", create.cabinet.mykids(), envir = envir)
@@ -143,6 +158,7 @@ con <- NULL
 none <- new("cabinet", readonly = TRUE)
 smocc <- create.cabinet.smocc()
 preterm <- create.cabinet.preterm()
+pops <- create.cabinet.pops()
 terneuzen <- create.cabinet.terneuzen()
 graham <- create.cabinet.graham()
 mykids <- create.cabinet.mykids()
@@ -150,6 +166,7 @@ mykids <- create.cabinet.mykids()
 installed.cabinets <- list(none = none,
                            smocc = smocc,
                            preterm = preterm,
+                           pops = pops,
                            terneuzen = terneuzen,
                            graham = graham,
                            mykids = mykids)
