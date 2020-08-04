@@ -1,3 +1,8 @@
+# jamestest 0.23.0
+
+* Adds POPS data
+* Updates SMOCC .json that correct for six erroneous BDS numbers
+
 # jamestest 0.21.1 
 
 * Add synthetic DOB to preterm and terneuzen JSON examples
