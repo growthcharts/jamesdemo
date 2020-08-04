@@ -38,7 +38,7 @@ shinyServer(function(input, output, session) {
            groeidiagrammen.nl = "https://groeidiagrammen.nl",
            james.tno.nl = "https://james.tno.nl",
            vps.stefvanbuuren.nl = "https://vps.stefvanbuuren.nl",
-           localhost = "http://localhost:5656")
+           localhost = "http://localhost")
   })
   current.path <- reactive({
     switch(input$server,
