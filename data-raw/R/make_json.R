@@ -11,7 +11,7 @@ for (cab in cabs) {
   cabinet <- installed.cabinets[[cab]]
   for (i in 1:length(cabinet)) {
     ind <- cabinet[[i]]
-    js <- convert_individual_bds(ind = ind)
+    js <- minihealth::convert_individual_bds(ind = ind)
     fn <- file.path(dir, paste0(gsub(" ", "_", slot(ind, "name")), ".json"))
     writeLines(text = js, con = fn)
   }
