@@ -1,3 +1,8 @@
+# jamestest 0.24.0
+
+* Updates `installed.cabinets` using modernised `minihealth::donordata_to_individual()` 
+that relies on`clopus::transform_z()` and `clopus::transform_y()` functions 
+
 # jamestest 0.23.0
 
 * Adds POPS data
