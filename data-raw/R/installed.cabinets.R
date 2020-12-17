@@ -99,6 +99,7 @@ create.cabinet.terneuzen <- function() {
 #' @return An S4 object of class \code{cabinet}
 #' @author Stef van Buuren 2019
 create.cabinet.graham <- function() {
+  graham <- load_data(dnr = "graham")
   dnr <- "graham"
   ids <- 1:9
   names <- c("Lotte G", "Tim G", "Hasna G", "Naomi G", "Sven G",
