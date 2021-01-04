@@ -49,13 +49,13 @@ create.cabinet.smocc <- function() {
   return(cab)
 }
 
-#' Creates cabinet of children from lollypop.preterm
+#' Creates cabinet of children from lollypop
 #'
 #' @seealso \linkS4class{cabinet}, \code{\link{create.cabinet.donor}}
 #' @return An S4 object of class \code{cabinet}
-#' @author Stef van Buuren 2016
+#' @author Stef van Buuren 2020
 create.cabinet.preterm <- function() {
-  dnr <- "lollypop.preterm"
+  dnr <- "lollypop"
   ids <- as.integer(c(53696, 53675, 53676, 53684, 53519, 53520, 53531, 53582, 53583, 53584))
   names <- c("Jurre P", "Sanne P",  "Milan P", "Roos P",  "Bram P",
              "Freek P", "Anouk P",  "Sharon P", "Nick P", "Simon P")
@@ -153,6 +153,7 @@ init.cabinets <- function(envir) {
 }
 
 library(minihealth)
+# NOTE: IF YOU WANT TO SAVE DDI, MAKE TEMPORARY FAT VERSION OF donorloader
 library(donorloader)
 con <- NULL
 
@@ -174,3 +175,4 @@ installed.cabinets <- list(none = none,
 
 usethis::use_data(installed.cabinets, overwrite = TRUE)
 
+# now run make_json.R
