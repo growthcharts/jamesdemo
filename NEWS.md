@@ -1,3 +1,10 @@
+# jamestest 0.25.0
+
+* Adds DDI to `installed.cabinets` by updating from fat `donorloader` package
+* Updates JSON files
+* Changes anthropometric --> automatic
+* Change json file to have an out-of-range gestational age
+
 # jamestest 0.24.0
 
 * Updates `installed.cabinets` using modernised `minihealth::donordata_to_individual()` 
