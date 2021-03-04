@@ -53,7 +53,7 @@ shinyServer(function(input, output, session) {
     host <- current.host()
     path <- current.path()
     app  <- file.path(host, path, "www/")
-    fun  <- file.path(host, path, "R/convert_bds_ind")
+    fun  <- file.path(host, path, "R/fetch_loc")
 
     # bds is a URL or a JSON string
     if (is.null(bds)) return(app)
