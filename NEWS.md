@@ -1,3 +1,7 @@
+# jamestest 0.26.0
+
+* Replaces deprecated `convert_bds_ind()` by `fetch_loc()`
+
 # jamestest 0.25.0
 
 * Adds DDI to `installed.cabinets` by updating from fat `donorloader` package
