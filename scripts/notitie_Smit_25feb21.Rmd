@@ -1,0 +1,38 @@
+---
+title: "Overleg notitie"
+author: "Stef van Buuren"
+date: "2/25/2021"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Overleg Lucy Smit, JGZ Kennemerland
+
+- Training reeks bijna afgesloten, positieve reacties
+
+### Onverwachte zaken
+
+- Geboortegewicht wordt niet automatisch in het lijste gewichtmetingen gezet (en dus niet geplot)
+- Groeicurven bestaande uit 1 punt worden niet geplot, eerder was dat wel het geval
+
+### Etniciteit
+
+- Standaard gaat de eerste curve altijd naar versie voor NL kinderen. Zou dat niet afhankelijk van geboorteland ouder moeten zijn?
+- Niet duidelijk is wat de criteria zijn voor Hindoestanen. Hoe kunnen we dat uit het dossier afleiden?
+
+### Verwijscriteria
+
+- Het 0.5 SDS verschil criterium voor hoofdomtrek geeft verwijzingen in gevallen waarmee de praktijk niet iets zou doen. Ziet eruit als normale curve.
+- De rapportage van adviezen is rommelig. Er is geen indicatie van het tijdinterval. MLCA vertoont niet de adviesnummering.
+- Lucy heeft teksten aangeleverd die beter aansluiten bij behoefte/denkwijze professionals/ouders. Daarmee is nog niets gebeurd.
+
+### Financiering
+
+- Lucy denkt graag mee over voorstellen voor verwervan van fondsen voor onderhoud en ontwikkeling JAMES, DIY, 
+- Bereid om bij gelegenheid presentatie voor vakgenoten te houden.
+
+
+
