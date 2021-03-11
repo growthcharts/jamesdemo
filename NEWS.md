@@ -1,3 +1,7 @@
+# jamestest 0.26.1
+
+* Adds testfile test25.json with extreme D-scores at start
+
 # jamestest 0.26.0
 
 * Replaces deprecated `convert_bds_ind()` by `fetch_loc()`
