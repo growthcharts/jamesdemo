@@ -115,6 +115,8 @@ sidebar <- shinydashboard::dashboardSidebar(
                             "T21 Minimal JSON" = "test21",
                             "T22 Range checks" = "test22",
                             "T23 Num 19 + 62, range 82 + 252, no groepen" = "test23",
+                            "T24 Add ddi" = "test24",
+                            "T25 Extreme D-score at start" = "test25",
                             "B1 no_vector bug" = "not_a_vector",
                             "B2 http400 bug" = "http400"),
                 selected = "test1")
