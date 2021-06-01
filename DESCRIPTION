@@ -24,5 +24,5 @@ Suggests:
 URL: https://github.com/stefvanbuuren/jamestest
 Remotes: 
   github::stefvanbuuren/jamesclient,
-  github::stefvanbuuren/jamestest
+  github::growthcharts/jamesdemodata
 RoxygenNote: 7.1.1
