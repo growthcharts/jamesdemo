@@ -1,3 +1,7 @@
+# jamestest 0.26.2
+
+* Replaces the built-in `extdata` directory by the `jamesdemodata` package
+
 # jamestest 0.26.1
 
 * Adds testfile test25.json with extreme D-scores at start
