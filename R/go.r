@@ -5,7 +5,7 @@
 #'@param \dots Passed down to \code{runApp}
 #'@return NULL
 #'@export
-go <- function(appDir = system.file("chart", package = "jamestest"), ...)
+go <- function(appDir = system.file("chart", package = "jamesdemo"), ...)
 {
     runApp(appDir = appDir, ...)
 }

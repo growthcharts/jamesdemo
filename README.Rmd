@@ -9,9 +9,9 @@ output: github_document
 knitr::opts_chunk$set(echo = TRUE, eval=FALSE)
 ```
 
-# jamestest
+# jamesdemo
 
-The `jamestest` is a simple Shiny app with demo children. The goal 
+The `jamesdemo` is a simple Shiny app with demo children. The goal 
 of the package is to test the website construction facility of the
 **Joint Automatic Measurement and Evaluation System (JAMES)**.
 JAMES is an **experimental** online resource for creating and analysing
@@ -19,7 +19,7 @@ growth charts.
 
 ## Installation
 
-The following statements will install the `jamestest` package
+The following statements will install the `jamesdemo` package
 
 ```{r eval = FALSE}
 install.packages("remotes")
@@ -31,7 +31,7 @@ remotes::install_github("stefvanbuuren/jamestest")
 View the website locally, as follows:
 
 ```{r}
-library(jamestest)
+library(jamesdemo)
 go()
 ```
 

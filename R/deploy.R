@@ -2,7 +2,7 @@
 #'
 #' @export
 deploy <- function() {
-  deployApp(appDir = system.file("chart", package = "jamestest"),
+  deployApp(appDir = system.file("chart", package = "jamesdemo"),
             appTitle =  "JAMES tryout",
             account = "tnochildhealthstatistics")
 }

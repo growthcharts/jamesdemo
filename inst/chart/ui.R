@@ -1,4 +1,4 @@
-library("jamestest")
+library("jamesdemo")
 library("jamesdemodata")
 library("jamesclient")
 library("httr")

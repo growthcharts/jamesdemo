@@ -1,9 +1,9 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# jamestest
+# jamesdemo
 
-The `jamestest` is a simple Shiny app with demo children. The goal of
+The `jamesdemo` is a simple Shiny app with demo children. The goal of
 the package is to test the website construction facility of the **Joint
 Automatic Measurement and Evaluation System (JAMES)**. JAMES is an
 **experimental** online resource for creating and analysing growth
@@ -11,7 +11,7 @@ charts.
 
 ## Installation
 
-The following statements will install the `jamestest` package
+The following statements will install the `jamesdemo` package
 
 ``` r
 install.packages("remotes")
@@ -23,7 +23,7 @@ remotes::install_github("stefvanbuuren/jamestest")
 View the website locally, as follows:
 
 ``` r
-library(jamestest)
+library(jamesdemo)
 go()
 ```
 
