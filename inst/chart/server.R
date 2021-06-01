@@ -22,8 +22,10 @@ shinyServer(function(input, output, session) {
     childname <- current.childname()
     if (childname == "0") return(NULL)
     if (childname == "1") return(NULL)
-    fn <- system.file("extdata", current.cabinet(), paste0(childname, ".json"),
-                      package = "jamestest")
+    cc <- current.cabinet()
+    if (cc == "preterm") cc <- "lollypop"
+    fn <- system.file("extdata", "bds_str", cc, paste0(childname, ".json"),
+                      package = "jamesdemodata")
     # target <- jsonlite::minify(readLines(con = fn))
     target <- readLines(con = fn)
     # url <- paste0("https://raw.githubusercontent.com/stefvanbuuren/jamestest/master/inst/extdata/test/", childname, ".json")

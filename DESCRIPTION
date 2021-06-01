@@ -15,6 +15,7 @@ Copyright: Stef van Buuren 2020
 Depends:
     R (>= 2.10),
     shiny,
+    jamesdemodata,
     jamesclient
 Imports:
     rsconnect,
