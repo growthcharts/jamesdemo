@@ -1,3 +1,7 @@
+# jamesdemo 0.27.0
+
+* Renames the package to `jamesdemo`
+
 # jamesdemo 0.26.2
 
 * Replaces the built-in `extdata` directory by the `jamesdemodata` package

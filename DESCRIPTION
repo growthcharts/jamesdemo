@@ -1,16 +1,16 @@
 Package: jamesdemo
 Type: Package
-Title: Shiny app to demo JAMES interface
+Title: App to interact with the JAMES chart site
 Author: Stef van Buuren
 Maintainer: Stef van Buuren <stef.vanbuuren@tno.nl>
-Description: A Shiny app with demo children for showing web site 
-    construction functionality implemented in the 
-    Joint Automatic Measurement and Evaluation System (JAMES). 
-Version: 0.26.3
-Date: 2021-06-01
+Description: A Shiny app that shows the web site construction functionality 
+    implemented in the Joint Automatic Measurement and Evaluation System (JAMES) 
+    on a set of demo children.
+Version: 0.27.0
+Date: 2021-06-02
 Encoding: UTF-8
 License: AGPL-3 + file LICENSE
-Copyright: Stef van Buuren 2020
+Copyright: Stef van Buuren 2021
 Depends:
     R (>= 2.10),
     shiny,
@@ -21,7 +21,7 @@ Imports:
     shinydashboard
 Suggests:
     testthat
-URL: https://github.com/stefvanbuuren/jamestest
+URL: https://github.com/growthcharts/jamesdemo
 Remotes: 
   github::stefvanbuuren/jamesclient,
   github::growthcharts/jamesdemodata
