@@ -3,11 +3,14 @@
 
 # jamesdemo
 
-The `jamesdemo` is a simple Shiny app with demo children. The goal of
-the package is to test the website construction facility of the **Joint
-Automatic Measurement and Evaluation System (JAMES)**. JAMES is an
-**experimental** online resource for creating and analysing growth
-charts.
+The `jamesdemo` package contains a simple Shiny app that shows site
+functionality of the **Joint Automatic Measurement and Evaluation System
+(JAMES)**. The API endpoint `request_site` as defined by
+[james](https://github.com/growthcharts/james) returns an URL that
+points to a site with personalised child charts. The `jamesdemo` app
+shows the site for a set of demo children. The
+[jamesdemodata](https://github.com/growthcharts/jamesdemodata) package
+stores the data of these children.
 
 ## Installation
 
@@ -15,20 +18,20 @@ The following statements will install the `jamesdemo` package
 
 ``` r
 install.packages("remotes")
-remotes::install_github("stefvanbuuren/jamestest")
+remotes::install_github("growthcharts/jamesdemo")
 ```
 
 ## Example
 
-View the website locally, as follows:
+Within RStudio, view the website locally as follows:
 
 ``` r
 library(jamesdemo)
 go()
 ```
 
-The site will not run in the internal RStudio viewer. Click on button
-`Open in browser`.
+The app does not run in the internal RStudio viewer. Click on button
+`Open in browser` to see it in action.
 
 ## Online version
 
@@ -38,4 +41,5 @@ You can spare yourself the trouble of installing the package, and visit
 
 ## Resources
 
--   [JAMES](https://github.com/stefvanbuuren/james)
+-   [james](https://github.com/growthcharts/james)
+-   [jamesdemodata](https://github.com/growthcharts/jamesdemodata)
