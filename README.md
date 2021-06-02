@@ -61,9 +61,9 @@ mimics the external client with a database with the children’s data. The
 
 Everything within the panel GROEIDIAGRAMMEN is produced by JAMES. The
 middle bar with **Groei** contains interactive controls managed by the
-JAMES API, in particular by function \`james::request\_site()\`\`. The
-right hand side figure, with the chart, is responsive to changes made in
-the middle bar and is also part of JAMES.
+JAMES API, in particular by function `james::request_site()`. The right
+hand side figure, with the chart, is responsive to changes made in the
+middle bar and is also part of JAMES.
 
 For developers: You may request the entire site in your application (as
 shown here), but it is also possible to just call individual elements,
