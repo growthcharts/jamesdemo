@@ -44,7 +44,8 @@ You can spare yourself the trouble of installing the package, and visit
 Interaction within the app should explain itself, but a few things may
 not be obvious at first.
 
-![Control panel in jamesdemo](inst/figures/JAMES_tryout.png)
+![Control panel in
+jamesdemo](https://raw.githubusercontent.com/growthcharts/jamesdemo/master/inst/figures/JAMES_tryout.png?raw=true)
 
 There are two control bars at the left. The leftmost bar with **Groep**,
 **Naam kind** and **Server** belongs to the `jamesdemo` Shiny app and
