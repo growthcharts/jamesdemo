@@ -4,7 +4,7 @@
 \alias{go}
 \title{Start the SHINY server}
 \usage{
-go(appDir = system.file("chart", package = "jamestest"), ...)
+go(appDir = system.file("chart", package = "jamesdemo"), ...)
 }
 \arguments{
 \item{appDir}{See \code{runApp}}

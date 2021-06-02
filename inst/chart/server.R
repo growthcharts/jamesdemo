@@ -28,7 +28,7 @@ shinyServer(function(input, output, session) {
                       package = "jamesdemodata")
     # target <- jsonlite::minify(readLines(con = fn))
     target <- readLines(con = fn)
-    # url <- paste0("https://raw.githubusercontent.com/stefvanbuuren/jamestest/master/inst/extdata/test/", childname, ".json")
+    # url <- paste0("https://raw.githubusercontent.com/growthcharts/jamesdemo/master/inst/extdata/test/", childname, ".json")
     # target <- readLines(con = url)
     # target url does not yet work
     # target <- url
