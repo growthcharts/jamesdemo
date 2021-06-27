@@ -11,11 +11,11 @@ sidebar <- shinydashboard::dashboardSidebar(
     tags$link(rel = "stylesheet", type = "text/css", href = "custom.css")
   ),
   selectInput(inputId = "cabinet",
-              label = "Groep",
+              label = "Group",
               choices = c("-" = "none",
-                          "SMOCK" = "smocc",
+                          "SMOCC" = "smocc",
                           "POPS" = "pops",
-                          "Pinkeltje" = "preterm",
+                          "Lollypop" = "preterm",
                           "Graham" = "graham",
                           "Terneuzen" = "terneuzen",
                           "Test" = "test"),
@@ -23,14 +23,14 @@ sidebar <- shinydashboard::dashboardSidebar(
   conditionalPanel(
     condition = "input.cabinet == 'none'",
     selectInput(inputId = "cpn.none",
-                label = "Naam kind",
+                label = "Child name",
                 choices = c("-" = "1"),
                 selected = "1")
   ),
   conditionalPanel(
     condition = "input.cabinet == 'smocc'",
     selectInput(inputId = "cpn_smocc",
-                label = "Naam kind",
+                label = "Child name",
                 choices = c("Laura S" = "Laura_S",
                             "Thomas S" = "Thomas_S",
                             "Anne S" = "Anne_S",
@@ -46,7 +46,7 @@ sidebar <- shinydashboard::dashboardSidebar(
   conditionalPanel(
     condition = "input.cabinet == 'pops'",
     selectInput(inputId = "cpn_pops",
-                label = "Naam kind",
+                label = "Child name",
                 choices = c("Angela" = "Angela",
                             "Boris" = "Boris",
                             "Chantalle" = "Chantalle",
@@ -62,7 +62,7 @@ sidebar <- shinydashboard::dashboardSidebar(
   conditionalPanel(
     condition = "input.cabinet == 'preterm'",
     selectInput(inputId = "cpn.preterm",
-                label = "Naam kind",
+                label = "Child name",
                 choices = c("Jurre P" = "Jurre_P",
                             "Sanne P" = "Sanne_P",
                             "Milan P" = "Milan_P",
@@ -78,7 +78,7 @@ sidebar <- shinydashboard::dashboardSidebar(
   conditionalPanel(
     condition = "input.cabinet == 'graham'",
     selectInput(inputId = "cpn.graham",
-                label = "Naam kind",
+                label = "Child name",
                 choices = c("Lotte G" = "Lotte_G",
                             "Tim G" = "Tim_G",
                             "Hasna G" = "Hasna_G",
@@ -93,7 +93,7 @@ sidebar <- shinydashboard::dashboardSidebar(
   conditionalPanel(
     condition = "input.cabinet == 'terneuzen'",
     selectInput(inputId = "cpn.terneuzen",
-                label = "Naam kind",
+                label = "Child name",
                 choices = c("T 163" = "T_163",
                             "T 1017" = "T_1017",
                             "T 1413" = "T_1413",
@@ -109,7 +109,7 @@ sidebar <- shinydashboard::dashboardSidebar(
   conditionalPanel(
     condition = "input.cabinet == 'test'",
     selectInput(inputId = "cpn.test",
-                label = "Naam test",
+                label = "Test name",
                 choices = c("T1 normal file" = "test1",
                             "T2 No Referentie" = "test2",
                             "T3 No OrganisatieCode" = "test3",
