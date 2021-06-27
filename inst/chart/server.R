@@ -6,6 +6,7 @@ shinyServer(function(input, output, session) {
     childname <- switch(cab,
                         "none" = "1",
                         "smocc" = input$cpn_smocc,
+                        "pops" = input$cpn_pops,
                         "preterm" = input$cpn.preterm,
                         "graham" = input$cpn.graham,
                         "terneuzen" = input$cpn.terneuzen,

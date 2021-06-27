@@ -14,6 +14,7 @@ sidebar <- shinydashboard::dashboardSidebar(
               label = "Groep",
               choices = c("-" = "none",
                           "SMOCK" = "smocc",
+                          "POPS" = "pops",
                           "Pinkeltje" = "preterm",
                           "Graham" = "graham",
                           "Terneuzen" = "terneuzen",
@@ -41,6 +42,22 @@ sidebar <- shinydashboard::dashboardSidebar(
                             "Tim S" = "Tim_S",
                             "Rick S" = "Rick_S"),
                 selected = "Laura_S")
+  ),
+  conditionalPanel(
+    condition = "input.cabinet == 'pops'",
+    selectInput(inputId = "cpn_pops",
+                label = "Naam kind",
+                choices = c("Angela" = "Angela",
+                            "Boris" = "Boris",
+                            "Chantalle" = "Chantalle",
+                            "Bonny" = "Bonny",
+                            "Clyde" = "Clyde",
+                            "Agnetha" = "Agnetha",
+                            "Anni-Frid" = "Anni-Frid",
+                            "Stan" = "Stan",
+                            "Laurel" = "Laurel",
+                            "Randy" = "Randy"),
+                selected = "Angela")
   ),
   conditionalPanel(
     condition = "input.cabinet == 'preterm'",
