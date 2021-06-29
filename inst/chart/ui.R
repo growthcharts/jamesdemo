@@ -4,7 +4,7 @@ library("jamesclient")
 library("httr")
 
 header <- shinydashboard::dashboardHeader(
-  title = "JAMES tryout")
+  title = "JAMES RECAP")
 
 sidebar <- shinydashboard::dashboardSidebar(
   tags$head(
@@ -15,11 +15,8 @@ sidebar <- shinydashboard::dashboardSidebar(
               choices = c("-" = "none",
                           "SMOCC" = "smocc",
                           "POPS" = "pops",
-                          "Lollypop" = "preterm",
-                          "Graham" = "graham",
-                          "Terneuzen" = "terneuzen",
-                          "Test" = "test"),
-              selected =  "none"),
+                          "Lollypop" = "preterm"),
+              selected =  "pops"),
   conditionalPanel(
     condition = "input.cabinet == 'none'",
     selectInput(inputId = "cpn.none",
@@ -144,7 +141,7 @@ sidebar <- shinydashboard::dashboardSidebar(
               choices = c("James" = "groeidiagrammen.nl",
                           "June" = "vps.stefvanbuuren.nl",
                           "Joshua" = "localhost"),
-              selected = "groeidiagrammen.nl")
+              selected = "localhost")
 )
 
 
