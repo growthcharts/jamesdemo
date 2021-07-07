@@ -22,7 +22,7 @@ shinyServer(function(input, output, session) {
     if (childname == "1") return(NULL)
     cc <- current.cabinet()
     if (cc == "preterm") cc <- "lollypop"
-    fn <- system.file("extdata", "bds_str", cc, paste0(childname, ".json"),
+    fn <- system.file("extdata", "bds_v1.0", cc, paste0(childname, ".json"),
                       package = "jamesdemodata")
     # target <- jsonlite::minify(readLines(con = fn))
     target <- readLines(con = fn)
