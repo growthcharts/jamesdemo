@@ -127,7 +127,13 @@ sidebar <- shinydashboard::dashboardSidebar(
               choices = c("James" = "groeidiagrammen.nl",
                           "June" = "vps.stefvanbuuren.nl",
                           "Joshua" = "localhost"),
-              selected = "groeidiagrammen.nl")
+              selected = "groeidiagrammen.nl"),
+  selectInput(inputId = "schema",
+              label = "Schema",
+              choices = c("v2.0" = "v2.0",
+                          "v1.1" = "v1.1",
+                          "v1.0" = "v1.0"),
+              selected = "v1.0")
 )
 
 
