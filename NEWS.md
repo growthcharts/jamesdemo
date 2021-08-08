@@ -1,3 +1,7 @@
+# jamesdemo 0.28.0
+
+* Adds a menu to select bds schema 1.0, 1.1 or 2.0
+
 # jamesdemo 0.27.0
 
 * Renames the package to `jamesdemo`
