@@ -1,3 +1,7 @@
+# jamesdem0 0.28.1
+
+- Adds proper version for `jamesdemodata` dependency
+
 # jamesdemo 0.28.0
 
 * Adds a menu to select bds schema 1.0, 1.1 or 2.0

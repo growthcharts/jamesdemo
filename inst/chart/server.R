@@ -18,13 +18,18 @@ shinyServer(function(input, output, session) {
     input$cabinet
   })
 
+  current.format <- reactive({
+    input$format
+  })
+
   current.target <- reactive({
     childname <- current.childname()
     if (childname == "0") return(NULL)
     if (childname == "1") return(NULL)
     cc <- current.cabinet()
     if (cc == "preterm") cc <- "lollypop"
-    fn <- system.file("extdata", paste0("bds_", input$schema), cc, paste0(childname, ".json"),
+    cf <- current.format()
+    fn <- system.file("extdata", paste0("bds_v", cf), cc, paste0(childname, ".json"),
                       package = "jamesdemodata")
     # target <- jsonlite::minify(readLines(con = fn))
     target <- readLines(con = fn)
