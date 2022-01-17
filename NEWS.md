@@ -1,3 +1,7 @@
+# jamesdemo 0.29.0
+
+- Restrict sites to JAMES and localhost
+
 # jamesdem0 0.28.1
 
 - Adds proper version for `jamesdemodata` dependency
