@@ -52,12 +52,11 @@ There are two control bars at the left. The leftmost bar with **Groep**,
 mimics the external client with a database with the children’s data. The
 **Server** menu allows setting one of three servers:
 
--   **James**: the production server. This should always work, and is
+-   **JAMES**: the production server. This should always work, and is
     the default;
--   **June**: the development server. New features will appear here
-    first, but it is less stable;
--   **Joshua**: the local server. Works only if the relevant images is
-    running locally under Docker Desktop.
+-   **localhost**: the local server. For development. Works only if you
+    are running the app locally and if the relevant JAMES container is
+    running locally under docker.
 
 Everything within the panel GROEIDIAGRAMMEN is produced by JAMES. The
 middle bar with **Groei** contains interactive controls managed by the
