@@ -133,7 +133,12 @@ sidebar <- shinydashboard::dashboardSidebar(
                           "1.1" = "1.1",
                           "1.0" = "1.0"
                           ),
-              selected = "2.0")
+              selected = "2.0"),
+  markdown("
+           * [Read Me](https://james.groeidiagrammen.nl/)
+           * [API](https://james.groeidiagrammen.nl/openapi/)
+           * [Source](https://github.com/growthcharts/james)
+           ")
 )
 
 
