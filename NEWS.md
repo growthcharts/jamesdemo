@@ -1,6 +1,11 @@
+# jamesdemo 0.30.0
+
+- Adds three info URL's
+- Renew shinyapps connection
+
 # jamesdemo 0.29.0
 
-- Restrict sites to JAMES and localhost
+- Restricts sites to JAMES and localhost
 
 # jamesdem0 0.28.1
 
