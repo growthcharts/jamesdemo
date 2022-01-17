@@ -1,12 +1,13 @@
-name: JAMES_tryout
-title: JAMES_tryout
+name: james_tryout
+title: james_tryout
 username:
 account: tnochildhealthstatistics
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
-appId: 1649406
-bundleId: 2724016
-url: https://tnochildhealthstatistics.shinyapps.io/JAMES_tryout/
-when: 1578873495.91495
+appId: 1992313
+bundleId: 5477334
+url: https://tnochildhealthstatistics.shinyapps.io/james_tryout/
+when: 1642431254.62569
+lastSyncTime: 1642431254.62569
 asMultiple: FALSE
 asStatic: FALSE
