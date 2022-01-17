@@ -124,17 +124,16 @@ sidebar <- shinydashboard::dashboardSidebar(
   ),
   selectInput(inputId = "server",
               label = "Server",
-              choices = c("James" = "groeidiagrammen.nl",
-                          "June" = "vps.stefvanbuuren.nl",
-                          "Joshua" = "localhost"),
-              selected = "groeidiagrammen.nl"),
+              choices = c("JAMES" = "james.groeidiagrammen.nl",
+                          "localhost" = "localhost"),
+              selected = "james.groeidiagrammen.nl"),
   selectInput(inputId = "format",
               label = "Format",
-              choices = c("1.0" = "1.0",
+              choices = c("2.0" = "2.0",
                           "1.1" = "1.1",
-                          "2.0" = "2.0"
+                          "1.0" = "1.0"
                           ),
-              selected = "1.0")
+              selected = "2.0")
 )
 
 
