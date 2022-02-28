@@ -1,3 +1,8 @@
+# jamesdemo 0.31.0
+
+- Adds site `test.groeidiagrammen.nl`
+- Remove old code and clean up
+
 # jamesdemo 0.30.0
 
 - Adds three info URL's
