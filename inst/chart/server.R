@@ -38,16 +38,8 @@ shinyServer(function(input, output, session) {
   current.host <- reactive({
     switch(input$server,
            james.groeidiagrammen.nl = "https://james.groeidiagrammen.nl",
+           test.groeidiagrammen.nl = "https://test.groeidiagrammen.nl",
            localhost = "http://localhost",
-           "")
-  })
-  current.path <- reactive({
-    switch(input$server,
-           james.groeidiagrammen.nl = "",
- #          ijgz.eaglescience.nl = "",
-           groeidiagrammen.nl_old = "ocpu/library/james",
-           vps.stefvanbuuren.nl = "ocpu/library/james",
-           localhost = "",
            "")
   })
 
@@ -57,18 +49,13 @@ shinyServer(function(input, output, session) {
     r <- jamesclient::james_post(host = host,
                                  path = "/site/request/json",
                                  txt = bds)
-    # if (length(r$warnings) && any(r$warnings != "")) {
-    #   warning(r$warnings)
-    # }
-    # if (length(r$messages) && any(r$messages != ""))
-    #   message(r$messages)
-    r$content
+    r$parsed
   })
   # --- end reactive functions
 
   output$james <- renderUI({
     site_url <- current.url()
-    tags$iframe(src = site_url, width = "100%", height = "1311px", style="border:1px dotted #18BC9C;")
+    tags$iframe(src = site_url, width = "100%", height = "1311px", style = "border:1px dotted #18BC9C;")
   })
 }
 )
