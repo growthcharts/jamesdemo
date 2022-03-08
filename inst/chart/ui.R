@@ -137,7 +137,7 @@ sidebar <- shinydashboard::dashboardSidebar(
               selected = "2.0"),
   markdown("
            * [Read Me](https://james.groeidiagrammen.nl/)
-           * [API](https://james.groeidiagrammen.nl/openapi/)
+           * [API](https://app.swaggerhub.com/apis/stefvanbuuren/james)
            * [Source](https://github.com/growthcharts/jamesdemo)
            ")
 )
