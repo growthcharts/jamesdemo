@@ -34,3 +34,7 @@ body > .main-header .logo {
 .control-label {
   color: #111111;
 }
+
+ul.nomark {
+  list-style-type: none;
+}

@@ -133,13 +133,12 @@ sidebar <- shinydashboard::dashboardSidebar(
               choices = c("2.0" = "2.0",
                           "1.1" = "1.1",
                           "1.0" = "1.0"
-                          ),
+              ),
               selected = "2.0"),
-  markdown("
-           * [Read Me](https://james.groeidiagrammen.nl/)
-           * [API](https://app.swaggerhub.com/apis/stefvanbuuren/james)
-           * [Source](https://github.com/growthcharts/jamesdemo)
-           ")
+  tags$ul(class = "nomark",
+          tags$li(tags$a(target="_blank", href = "https://james.groeidiagrammen.nl/", "Read Me")),
+          tags$li(tags$a(target="_blank", href = "https://app.swaggerhub.com/apis/stefvanbuuren/james", "API\n")),
+          tags$li(tags$a(target="_blank", href = "https://github.com/growthcharts/jamesdemo", "Source")))
 )
 
 
