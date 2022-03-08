@@ -1,3 +1,7 @@
+# jamesdemo 0.32.0
+
+- Update external links
+
 # jamesdemo 0.31.0
 
 - Adds site `test.groeidiagrammen.nl`
