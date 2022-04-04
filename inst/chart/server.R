@@ -47,6 +47,7 @@ shinyServer(function(input, output, session) {
     bds  <- current.target()
     host <- current.host()
     r <- jamesclient::james_post(host = host,
+                                 sitehost = host,
                                  path = "/site/request/json",
                                  txt = bds)
     r$parsed
