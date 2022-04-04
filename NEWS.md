@@ -1,3 +1,7 @@
+# jamesdemo 0.33.0
+
+- Adds `sitehost` parameter that is new in JAMES 1.2.0
+
 # jamesdemo 0.32.0
 
 - Update external links
