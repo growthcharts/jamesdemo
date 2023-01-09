@@ -31,7 +31,7 @@ shinyServer(function(input, output, session) {
     cf <- current.format()
     fn <- system.file("extdata", paste0("bds_v", cf), cc, paste0(childname, ".json"),
                       package = "jamesdemodata")
-    target <- readLines(con = fn)
+    target <- jamesclient::read_json_js(txt = fn)
     return(target)
   })
 
