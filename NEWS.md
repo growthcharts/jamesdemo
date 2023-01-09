@@ -1,3 +1,7 @@
+# jamesdemo 0.34.0
+
+- Resolves `ERROR: length(txt) <= 1L is not TRUE` when the test data are selected
+
 # jamesdemo 0.33.0
 
 - Adds `sitehost` parameter that is new in JAMES 1.2.0

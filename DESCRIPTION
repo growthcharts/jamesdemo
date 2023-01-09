@@ -6,16 +6,15 @@ Maintainer: Stef van Buuren <stef.vanbuuren@tno.nl>
 Description: A Shiny app that shows the web site construction functionality 
     implemented in the Joint Automatic Measurement and Evaluation System (JAMES) 
     on a set of demo children.
-Version: 0.33.0
-Date: 2022-04-04
+Version: 0.34.0
+Date: 2023-01-09
 Encoding: UTF-8
 License: AGPL-3 + file LICENSE
-Copyright: Stef van Buuren 2021
 Depends:
     R (>= 2.10),
     shiny,
     jamesdemodata (>= 0.7.1),
-    jamesclient (>= 0.26.1)
+    jamesclient (>= 0.30.0)
 Imports:
     rsconnect,
     shinydashboard
@@ -26,4 +25,4 @@ URL:
 Remotes: 
     github::growthcharts/jamesclient,
     github::growthcharts/jamesdemodata
-  
+RoxygenNote: 7.2.3
