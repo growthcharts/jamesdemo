@@ -1,3 +1,7 @@
+# jamesdemo 0.35.0
+
+- Adds the new default to read data according to JSON schema V3.0, as defined in `bdsreader`
+
 # jamesdemo 0.34.0
 
 - Resolves `ERROR: length(txt) <= 1L is not TRUE` when the test data are selected

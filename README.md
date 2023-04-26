@@ -52,11 +52,12 @@ There are two control bars at the left. The leftmost bar with **Groep**,
 mimics the external client with a database with the children’s data. The
 **Server** menu allows setting one of three servers:
 
--   **JAMES**: the production server. This should always work, and is
-    the default;
--   **localhost**: the local server. For development. Works only if you
-    are running the app locally and if the relevant JAMES container is
-    running locally under docker.
+- **JAMES**: the production server at
+  <https://james.groeidiagrammen.nl>. This should always work, and is
+  the default;
+- **localhost**: the local server. For development. Works only if you
+  are running the app locally and if the relevant JAMES container is
+  running locally under docker.
 
 Everything within the panel GROEIDIAGRAMMEN is produced by JAMES. The
 middle bar with **Groei** contains interactive controls managed by the
@@ -70,5 +71,5 @@ and build the user interaction yourself.
 
 ## Resources
 
--   [james](https://github.com/growthcharts/james)
--   [jamesdemodata](https://github.com/growthcharts/jamesdemodata)
+- [james](https://github.com/growthcharts/james)
+- [jamesdemodata](https://github.com/growthcharts/jamesdemodata)
