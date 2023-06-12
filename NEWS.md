@@ -1,3 +1,10 @@
+# jamesdemo 0.36.0
+
+- Repairs two problems. 
+
+1. Properly displays the chartcode
+2. Updates to the `demodata 0.10.0` package that corrects errors in the ga data
+
 # jamesdemo 0.35.0
 
 - Adds the new default to read data according to JSON schema V3.0, as defined in `bdsreader`
