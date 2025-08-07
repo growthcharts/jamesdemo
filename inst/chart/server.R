@@ -37,19 +37,52 @@ shinyServer(function(input, output, session) {
 
   current.host <- reactive({
     switch(input$server,
-           james.groeidiagrammen.nl = "https://james.groeidiagrammen.nl",
-           test.groeidiagrammen.nl = "https://test.groeidiagrammen.nl",
-           localhost = "http://localhost",
+           "james.groeidiagrammen.nl" = "https://james.groeidiagrammen.nl",
+           "james-test.groeidiagrammen.nl" = "https://james.groeidiagrammen.nl",
+           "localhost:8080" = "http://localhost:8080",
            "")
   })
 
   current.url <- reactive({
-    bds  <- current.target()
+    bds <- current.target()
     host <- current.host()
-    r <- jamesclient::james_post(host = host,
-                                 sitehost = host,
-                                 path = "/site/request/json",
-                                 txt = bds)
+
+    # We need different behavior for local and remote hosts
+    # because local hosts do not support nested file uploads
+    if (host %in% c("http://localhost:8080", "http://127.0.0.1:8080")) {
+      # Step 1: Upload the data
+      up <- jamesclient::james_post(
+        host = host,
+        sitehost = host,
+        path = "data/upload",
+        txt = bds,
+        upload = FALSE
+      )
+
+      # Extract session key
+      session <- up$session
+      if (is.null(session) || session == "") {
+        stop("Upload failed or session not returned.")
+      }
+
+      # Step 2: Run the main request with uploaded session
+      r <- jamesclient::james_post(
+        host = host,
+        sitehost = host,
+        path = "site/request/json",
+        session = session,
+        upload = FALSE
+      )
+    } else {
+      # Regular call for remote hosts
+      r <- jamesclient::james_post(
+        host = host,
+        sitehost = host,
+        path = "site/request/json",
+        txt = bds,
+        upload = TRUE
+      )
+    }
     r$parsed
   })
   # --- end reactive functions
