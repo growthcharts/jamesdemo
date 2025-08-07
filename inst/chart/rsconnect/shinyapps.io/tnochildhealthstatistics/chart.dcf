@@ -5,9 +5,7 @@ account: tnochildhealthstatistics
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
 appId: 6006224
-bundleId: 5761983
+bundleId: 10742238
 url: https://tnochildhealthstatistics.shinyapps.io/chart/
-when: 1649066476.34046
-lastSyncTime: 1649066476.34047
 asMultiple: FALSE
 asStatic: FALSE
