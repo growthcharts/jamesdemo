@@ -1,3 +1,8 @@
+# jamesdemo 0.38.0
+
+- Updates the published version at <https://tnochildhealthstatistics.shinyapps.io/james_tryout/>
+- Update links in the side bar
+
 # jamesdemo 0.37.0
 
 - Adapts server logic to evade problems with nested uploads when on localhost
