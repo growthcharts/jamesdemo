@@ -30,9 +30,6 @@ library(jamesdemo)
 go()
 ```
 
-The app does not run in the internal RStudio viewer. Click on button
-`Open in browser` to see it in action.
-
 ## Online version
 
 You can spare yourself the trouble of installing the package, and visit
@@ -44,8 +41,7 @@ You can spare yourself the trouble of installing the package, and visit
 Interaction within the app should explain itself, but a few things may
 not be obvious at first.
 
-![Control panel in
-jamesdemo](https://raw.githubusercontent.com/growthcharts/jamesdemo/master/inst/figures/JAMES_tryout.png?raw=true)
+![](../../../../Library/R/arm64/4.5/library/jamesdemo/figures/JAMES_tryout.png)<!-- -->
 
 There are two control bars at the left. The leftmost bar with **Groep**,
 **Naam kind** and **Server** belongs to the `jamesdemo` Shiny app and
@@ -55,19 +51,14 @@ mimics the external client with a database with the children’s data. The
 - **JAMES**: the production server at
   <https://james.groeidiagrammen.nl>. This should always work, and is
   the default;
-- **localhost**: the local server. For development. Works only if you
-  are running the app locally and if the relevant JAMES container is
-  running locally under docker.
+- **localhost:8080**: the local server. For development. Works only if
+  the JAMES container is running locally under docker.
 
-Everything within the panel GROEIDIAGRAMMEN is produced by JAMES. The
-middle bar with **Groei** contains interactive controls managed by the
-JAMES API, in particular by function `james::request_site()`. The right
-hand side figure, with the chart, is responsive to changes made in the
-middle bar and is also part of JAMES.
-
-For developers: You may request the entire site in your application (as
-shown here), but it is also possible to just call individual elements,
-and build the user interaction yourself.
+Both the inner control menu and the graphical output are produced by
+JAMES. The inner control menu contains interactive controls managed by
+the JAMES API, in particular by function `james::request_site()`. The
+output section at the right hand side is responsive to changes made in
+the control menu.
 
 ## Resources
 

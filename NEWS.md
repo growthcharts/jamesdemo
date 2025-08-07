@@ -1,3 +1,9 @@
+# jamesdemo 0.37.0
+
+- Adapts server logic to evade problems with nested uploads when on localhost
+- Uses localhost on port 8080
+- Updates README
+
 # jamesdemo 0.36.0
 
 - Repairs two problems. 
