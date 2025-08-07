@@ -41,7 +41,12 @@ You can spare yourself the trouble of installing the package, and visit
 Interaction within the app should explain itself, but a few things may
 not be obvious at first.
 
-![](../../../../Library/R/arm64/4.5/library/jamesdemo/figures/JAMES_tryout.png)<!-- -->
+<figure>
+<img src="man/figures/JAMES_tryout.png"
+alt="Screenshot of the JAMES tryout app" />
+<figcaption aria-hidden="true">Screenshot of the JAMES tryout
+app</figcaption>
+</figure>
 
 There are two control bars at the left. The leftmost bar with **Groep**,
 **Naam kind** and **Server** belongs to the `jamesdemo` Shiny app and
