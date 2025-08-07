@@ -137,9 +137,9 @@ sidebar <- shinydashboard::dashboardSidebar(
               ),
               selected = "3.0"),
   tags$ul(class = "nomark",
-          tags$li(tags$a(target="_blank", href = "https://james.groeidiagrammen.nl/", "Read Me")),
-          tags$li(tags$a(target="_blank", href = "https://app.swaggerhub.com/apis/stefvanbuuren/james", "API\n")),
-          tags$li(tags$a(target="_blank", href = "https://github.com/growthcharts/jamesdemo", "Source")))
+          tags$li(tags$a(target = "_blank", href = "https://james.groeidiagrammen.nl/docs/", "OpenAPI\n")),
+          tags$li(tags$a(target = "_blank", href = "https://james.groeidiagrammen.nl/", "Examples")),
+          tags$li(tags$a(target = "_blank", href = "https://github.com/growthcharts", "GitHub")))
 )
 
 
